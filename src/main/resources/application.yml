@@ -1,0 +1,3 @@
+app:
+  queue:
+    name: charge.queue
