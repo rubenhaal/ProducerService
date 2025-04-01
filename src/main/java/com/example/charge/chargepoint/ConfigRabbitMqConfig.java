@@ -15,7 +15,7 @@ public class ConfigRabbitMqConfig {
     private String queueName;
 
     /**
-     * Declara la cola si no existe.
+     * Add queue if it doesn't existe
      */
     @Bean
     public Queue queue() {
@@ -23,7 +23,7 @@ public class ConfigRabbitMqConfig {
     }
 
     /**
-     * Usa Jackson para convertir objetos a JSON y viceversa.
+     * Use jackson to convert objects to JSON
      */
     @Bean
     public MessageConverter jsonMessageConverter() {
@@ -31,7 +31,7 @@ public class ConfigRabbitMqConfig {
     }
 
     /**
-     * Configura el RabbitTemplate con el converter JSON.
+     * Configure RabbitTemplate to conver JSON
      */
     @Bean
     public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory,
